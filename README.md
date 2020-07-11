@@ -3,6 +3,7 @@ Weather Application - Udacity project 2
 
 
 visit this [link](https://atarek12.github.io/weather-journal-app/website) for the webpage
+---
 **Hint**: this link is for preview only, you need to first to run the local server `server.js` with the [nodejs](https://nodejs.org/en/download/) package for proper working!
 
 ___
