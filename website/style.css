@@ -9,6 +9,9 @@ body{
     font-family: 'Oswald', sans-serif;
     text-align: center;
     box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
