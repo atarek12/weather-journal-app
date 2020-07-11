@@ -1,0 +1,212 @@
+body{
+    background: #fffff8;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#app{
+    background: linear-gradient(to right, rgb(127, 127, 213), rgb(134, 168, 231), rgb(145, 234, 228));
+    color: #f0f0f0;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.holder{ 
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 2vh;
+}
+
+.entry{
+    background: rgba(59, 74, 107, .4);
+    height: 30vh;
+    position: relative;
+    overflow: auto;
+    margin: 0;
+    max-width: 70vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#entryHolder{
+    text-align: left;
+    color: #43dde6;
+}
+
+#date, 
+#temp,
+#content{
+    margin: 2vh;
+} 
+
+#date::before, 
+#temp::before,
+#content::before{
+    content: '- ';
+    font-weight: bold;
+    color: #fc5185;
+} 
+
+.zip span{
+    font-size: 2rem;
+    color: #f0f0f0;
+}
+
+.myInput{
+    width: 80vw ;
+    margin: 1vh 0;
+}
+
+#zip,
+#country,
+#city{
+    width: 20vw;
+    height: 3rem;
+}
+
+.headline {
+    font-size: 5rem;
+}
+
+#generate{
+    margin: 0;
+    cursor: pointer;
+}
+
+#generate:active{
+    transform: scale(0.95);
+}
+
+#generate:hover{
+    background-color: #fc5185;
+    color: #43dde6;
+    font-weight: bold;
+}
+
+#weather_icon{
+    position: absolute;
+    right: 4vw;
+    top: 40%;
+    opacity: 0;
+}
+
+#img_desc{
+    position: absolute;
+    right: 4vw;
+    top: 65%;
+    font-size: 1rem;
+    color: #f0f0f0;
+}
+
+
+form span.warning,
+form span.hint{
+    font-size: 0;
+    color: #333;
+    display: inline-block;
+    height: 2vh;
+    transition: ease 0.5s font-size;
+}
+
+form span.warning.active,
+form span.hint.active{
+    font-size: 1rem;
+}
+
+
+
+/* 
+
+Media Queries
+
+*/
+
+@media only screen and (max-width: 700px){
+    .headline {
+        font-size: 3rem;
+    }
+
+    #zip{
+        display: inline-block;
+        width: 80vw;
+    }
+
+    #country,
+    #city{
+        display: inline-block;
+        width: 30vw;
+    }
+
+    .zip span:first-of-type{
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 450px){
+    .headline {
+        font-size: 2rem;
+    }
+
+    .holder{
+        font-size: 1rem;
+    }
+
+    #zip,
+    #country,
+    #city{
+        width: 80vw;
+        height: 4vh;
+        margin: 0;
+    }
+
+    .zip span{
+        display: block;
+        font-size: 1rem;
+    }
+
+    #weather_icon,
+    #img_desc{
+        position: static;
+        display: block;
+    }
+
+    #weather_icon{
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 300px){
+    .headline {
+        font-size: 1.2rem;
+    }
+
+    .holder{
+        font-size: 0.8rem;
+    }
+
+    #zip,
+    #country,
+    #city{
+        width: 60vw;
+        height: 2vh;
+        margin: 0;
+    }
+
+    .myInput{
+        width: 60vw;
+        height: 2vh;
+        
+    }
+
+    .zip span{
+        display: block;
+        font-size: 1rem;
+    }
+
+}
